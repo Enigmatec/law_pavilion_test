@@ -50,3 +50,10 @@ Start the application:
 ```
 php artisan serve
 
+```
+## Available Endpoints
+# Export Endpoint: To export consolidation orders table data to excel file and send the file to the provided mail
+```
+{baseUrl}/api/export : Get
+```
+
