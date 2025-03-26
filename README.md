@@ -39,12 +39,13 @@ php artisan migrate
 Open Tinker: 
 ```
 php artisan tinker
-```
 
+```
 Run Factories
 ```
 OrderItem::factory()->count(100)->create()
 
+```
 Start the application: 
 ```
 php artisan serve
