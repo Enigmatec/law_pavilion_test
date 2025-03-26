@@ -34,7 +34,6 @@ php artisan key:generate
 Update .env file: 
 Set up database credential and mail credentials
 
-```
 Run database migrations: 
 ```
 php artisan migrate
