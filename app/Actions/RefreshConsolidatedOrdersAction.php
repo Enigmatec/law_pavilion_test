@@ -13,7 +13,7 @@ class RefreshConsolidatedOrdersAction {
 
         Log::info('🚀 Refreshing consolidated_orders table...');
 
-         // ✅ Create a temporary table to avoid downtime
+         // ✅ Create a temporary table to avoid downtime and keep data if encounter any error
         DB::statement('CREATE TABLE consolidated_orders_temp LIKE consolidated_orders');
 
         // Step 2: Insert new data in chunks
