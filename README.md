@@ -24,17 +24,27 @@ composer install
 ```
 Set up environment variables:  
 ```
-Generate Key: php artisan key:generate
+cp .env.example .env
+
+```
+Generate Key: 
+```
+php artisan key:generate
 ```
 Run database migrations: 
 ```
 php artisan migrate
 
 ```
-Run factories: 
+Open Tinker: 
 ```
-php artisan tinker  followed by OrderItem::factory()->count(100)->count()
+php artisan tinker
 ```
+
+Run Factories
+```
+OrderItem::factory()->count(100)->create()
+
 Start the application: 
 ```
 php artisan serve
