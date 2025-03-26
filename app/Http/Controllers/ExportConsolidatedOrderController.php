@@ -21,7 +21,7 @@ class ExportConsolidatedOrderController extends Controller
             new NotifyUserOfCompletedExport(),
         ]);
 
-        return response()->json(['message' => "Excel File Generating"]);
+        return response()->json(['message' => "Excel File Generating: You will be mailed the excel file after generating is completed"]);
 
     }
 }
