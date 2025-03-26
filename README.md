@@ -56,4 +56,8 @@ Export Endpoint: To export consolidation orders table data to excel file and sen
 ```
 {baseUrl}/api/export : Get
 ```
+Import Endpoint: To import corrected/updated  data to consolidation orders table
+```
+{baseUrl}/api/import : Post
+```
 
