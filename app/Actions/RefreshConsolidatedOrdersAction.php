@@ -16,8 +16,6 @@ class RefreshConsolidatedOrdersAction {
          // ✅ Create a temporary table to avoid downtime
         DB::statement('CREATE TABLE consolidated_orders_temp LIKE consolidated_orders');
 
-        // DB::statement('TRUNCATE TABLE consolidated_orders'); // Clears the table
-
         // Step 2: Insert new data in chunks
         DB::table('order_items')
             ->join('orders', 'orders.id', '=', 'order_items.order_id')
