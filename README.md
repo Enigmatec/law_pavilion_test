@@ -52,6 +52,17 @@ OrderItem::factory()->count(100)->create()
 Start the application: 
 ```
 php artisan serve
+```
+Refresh/Repopulate Consolidated Order Table
+Run the following command:
+```
+php artisan refresh:consolidated-orders
+
+```
+Export Data to Excel
+Run the following command to export data:
+```
+php artisan export:consolidated-order
 
 ```
 ## Available Endpoints
