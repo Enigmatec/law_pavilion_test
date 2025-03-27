@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project addresses performance bottlenecks in reporting and analytics for a growing e-commerce database. Due to high normalization, analytics queries require expensive joins across large tables. To optimize performance, we introduce a denormalized table, consolidated_orders, which consolidates customer, order, and product data into a single table.
+This project addresses performance bottlenecks in reporting and analytics for a growing e-commerce database. Due to high normalization, analytics queries require expensive joins across large tables. To optimize performance, we introduce a denormalized table, consolidated_orders, which consolidates customer, order, product and order_item data into a single table.
 
 ### Setup & Installation
 ### Prerequisites
