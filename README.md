@@ -16,6 +16,8 @@ Installation Steps
 Clone the repository:
 ```
 git clone https://github.com/Enigmatec/law_pavilion_test.git
+
+cd law_pavilion_test
 ```
 
 Install dependencies: 
