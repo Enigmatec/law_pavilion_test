@@ -20,7 +20,7 @@ class ImportConsolidatedOrderController extends Controller
      */
     public function __invoke(Request $request)
     {
-        $request->validate(['file' => ['required', 'file', 'mimes:xls,xlsx', 'max:2048']]);
+        $request->validate(['file' => ['required', 'file', 'mimes:xlsx', 'max:2048']]);
 
         // To avoid validation error in the queue whcih could lead to failure
         if($errorMessage = $this->validateFileFieldBeforeProcessing($request->file)){
