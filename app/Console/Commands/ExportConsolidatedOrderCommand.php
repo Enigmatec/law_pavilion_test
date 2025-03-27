@@ -13,7 +13,7 @@ class ExportConsolidatedOrderCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'export:consolidated-order {--email=}';
+    protected $signature = 'export:consolidated-order';
 
     /**
      * The console command description.
