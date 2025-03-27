@@ -16,9 +16,10 @@ class ExportConsolidatedOrderController extends Controller
      */
     public function __invoke(Request $request)
     {
+        $request->validate(['email' => ['required', 'email:filter']]);
 
         (new ConsolidatedOrderExport)->queue('consolidated_order.xlsx')->chain([
-            new NotifyUserOfCompletedExport(),
+            new NotifyUserOfCompletedExport($request->email),
         ]);
 
         return response()->json(['message' => "Excel File Generating: You will be mailed the excel file after generating is completed"]);

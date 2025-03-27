@@ -14,7 +14,7 @@ class NotifyUserOfCompletedExport implements ShouldQueue
     /**
      * Create a new job instance.
      */
-    public function __construct()
+    public function __construct(private string $email)
     {
         //
     }
@@ -25,7 +25,7 @@ class NotifyUserOfCompletedExport implements ShouldQueue
     public function handle(): void
     {
         Notification::route('mail', [
-            config('services.export_notification.recipient_email') =>  config('services.export_notification.recipient_name')
+            $this->email =>  config('app.name')
         ])->notify(new ExportReady());
     }
 }
