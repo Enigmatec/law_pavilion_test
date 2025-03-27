@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Actions\ExportConsolidatedAction;
 use App\Exports\ConsolidatedOrderExport;
 use App\Jobs\NotifyUserOfCompletedExport;
 use Illuminate\Http\Request;
@@ -16,9 +17,7 @@ class ExportConsolidatedOrderController extends Controller
     {
         $request->validate(['email' => ['required', 'email:filter']]);
 
-        (new ConsolidatedOrderExport)->queue('consolidated_order.xlsx')->chain([
-            new NotifyUserOfCompletedExport($request->email),
-        ]);
+        ExportConsolidatedAction::handle($request->email);
 
         return response()->json(['message' => "Excel File Generating: You will be mailed the excel file after generating is completed"]);
 

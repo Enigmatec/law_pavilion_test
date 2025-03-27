@@ -19,7 +19,7 @@ class RefreshConsolidatedOrderCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'Reload consolidated orders table by collecting data from several tables';
 
     /**
      * Execute the console command.
